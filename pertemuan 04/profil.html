@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Koleksi Film yang Pernah Saya Tonton</title>
 
-  <!-- urutan: token → dasar → tata letak → komponen → tema -->
+  <!-- CSS -->
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="layout.css">
@@ -14,194 +16,307 @@
   <link rel="stylesheet" href="tema.css">
 </head>
 
-  <title>Koleksi Film yang Pernah Saya Tonton</title>
-  <style>
-    body { 
-      font-family: sans-serif; 
-      margin: 0;
-      padding: 20px;
-      line-height: 1.6; 
-      background-color: #E8EED9; 
-      color: #2B2D2F;
-    }
-
-    .pink-header-1 { 
-      color: #C71585; 
-    }
-    .pink-header-2 { 
-      color: #C71585; 
-    }
-
-    h1, h2, h3 {
-      color: #C71585;
-    }
-
-    table, th, td { 
-      border: 1px solid #C4D3A6; 
-      border-collapse: collapse; 
-      padding: 10px; 
-    }
-    th { 
-      background-color: #D3E0B5;
-      color: #3D4E1E;
-      text-align: left; 
-    }
-    td, th[scope="row"] {
-      background-color: #F8FAF2;
-    }
-
-    img { 
-      object-fit: cover; 
-      border-radius: 6px; 
-      border: 2px solid #FFB6C1; 
-    }
-
-    button {
-      background-color: #C71585;
-      color: #ffffff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #A0126C;
-    }
-  </style>
-</head>
 <body>
 
+  <!-- HEADER -->
   <header>
-    <h1 class="pink-header-1"># PABW — Indriani Putri Darussalam — 25523228</h1>
-    <h2 class="pink-header-2"># ini pertemuan 3</h2>
 
-    <h1>Koleksi Film yang Pernah Saya Tonton</h1>
-    <nav aria-label="Navigasi utama">
-      <ul>
-        <li><a href="#daftar-film">Daftar Film</a></li>
-        <li><a href="#tambah-film">Tambah Film</a></li>
-        <li><a href="#tentang-saya">Tentang Saya</a></li>
-      </ul>
-    </nav>
+    <h1 class="pink-header-1">
+      # PABW — Indriani Putri Darussalam — 25523228
+    </h1>
+
+    <h2 class="pink-header-2">
+      # ini pertemuan 3
+    </h2>
+
+    <!-- Navbar -->
+    <div class="header-nav">
+
+      <h1 class="header-title">
+        Koleksi Film yang Pernah Saya Tonton
+      </h1>
+
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li>
+            <a href="#daftar-film">Daftar Film</a>
+          </li>
+
+          <li>
+            <a href="#tambah-film">Tambah Film</a>
+          </li>
+
+          <li>
+            <a href="#tentang-saya">Tentang Saya</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
   </header>
 
+
+  <!-- MAIN -->
   <main>
+
+    <!-- DAFTAR FILM -->
     <section id="daftar-film">
-      <h3>Daftar Film</h3>
 
-      <table>
-        <caption>Daftar film yang pernah saya tonton</caption>
-        <thead>
-          <tr>
-            <th scope="col">Judul</th>
-            <th scope="col">Tahun</th>
-            <th scope="col">Genre</th>
-            <th scope="col">Rating Saya</th>
-          </tr>
-        </thead>
+      <h2>Daftar Film</h2>
 
-        <tbody id="tabel-film">
-          <tr>
-            <th scope="row">
-              <img src="The_house_bunny.jpg" alt="sosialita yang menjadi ibu asrama" width="100" height="100" loading="lazy">
-              <br>The house bunny
-            </th>
-            <td>2008</td>
-            <td>Komedi</td>
-            <td>9/10</td>
-          </tr>
-          <tr>
-            <th scope="row">
-              <img src="Happiness.jpg" alt="penyebaran virus zombie melalu pil" width="100" height="100" loading="lazy">
-              <br>Happiness
-            </th>
-            <td>2021</td>
-            <td>Thriller</td>
-            <td>10/10</td>
-          </tr>
-          <tr>
-            <th scope="row">
-              <img src="Obsession.jpg" alt="obsesi kepada niki" width="100" height="100" loading="lazy">
-              <br>Obsession
-            </th>
-            <td>2026</td>
-            <td>Horor Supernatural</td>
-            <td>9/10</td>
-          </tr>
-          <tr>
-            <th scope="row">
-              <img src="White_chicks.jpg" alt="dua saudara laki-laki yang menjadi wanita" width="100" height="100" loading="lazy">
-              <br>White chicks
-            </th>
-            <td>2004</td>
-            <td>Komedi</td>
-            <td>8/10</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-container">
+
+        <table>
+
+          <caption>
+            Koleksi film yang pernah saya tonton
+          </caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Judul</th>
+              <th scope="col">Tahun</th>
+              <th scope="col">Genre</th>
+              <th scope="col">Rating</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <th scope="row">
+                <img
+                  src="The_house_bunny.jpg"
+                  alt="sosialita yang menjadi pengasuh di rumah para mahasiswa"
+                  width="100"
+                >
+                The House Bunny
+              </th>
+
+              <td>2008</td>
+
+              <td>Comedy</td>
+
+              <td>7/10</td>
+            </tr>
+
+
+            <tr>
+              <th scope="row">
+                <img
+                  src="Happiness.jpg"
+                  alt="penyakit mental yang membuat orang menjadi depresi"
+                  width="100"
+                >
+                Happiness
+              </th>
+
+              <td>2011</td>
+
+              <td>Drama</td>
+
+              <td>8/10</td>
+            </tr>
+
+
+            <tr>
+              <th scope="row">
+                <img
+                  src="Obsession.jpg"
+                  alt="niki yang sedang menatap ke arah kamera"
+                  width="100"
+                >
+                Obsession
+              </th>
+
+              <td>2019</td>
+
+              <td>Thriller</td>
+
+              <td>7.5/10</td>
+            </tr>
+
+
+            <tr>
+              <th scope="row">
+                <img
+                  src="White_Chicks.jpg"
+                  alt="pria yang menyamar menjadi wanita"
+                  width="100"
+                >
+                White Chicks
+              </th>
+
+              <td>2004</td>
+
+              <td>Comedy</td>
+
+              <td>8.5/10</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
     </section>
 
+
+    <!-- TAMBAH FILM -->
     <section id="tambah-film">
-      <h3>Tambah Film</h3>
-      <form id="form-tambah">
+
+      <h2>Tambah Film</h2>
+
+      <form id="film-form">
+
         <p>
-          <label for="judul-film">Judul film:</label><br>
-          <input type="text" id="judul-film" name="judul-film" required>
+          <label for="judul">
+            Judul Film
+          </label>
+
+          <input
+            type="text"
+            id="judul"
+            name="judul"
+            required
+          >
         </p>
+
+
         <p>
-          <label for="tahun-film">Tahun rilis:</label><br>
-          <input type="number" id="tahun-film" name="tahun-film" min="1900" max="2026" required>
+          <label for="tahun">
+            Tahun
+          </label>
+
+          <input
+            type="number"
+            id="tahun"
+            name="tahun"
+            required
+          >
         </p>
+
+
         <p>
-          <label for="genre-film">Genre:</label><br>
-          <input type="text" id="genre-film" name="genre-film" placeholder="Misal: Komedi, Thriller" required>
+          <label for="genre">
+            Genre
+          </label>
+
+          <input
+            type="text"
+            id="genre"
+            name="genre"
+            required
+          >
         </p>
+
+
         <p>
-          <label for="rating-film">Rating (1-10):</label><br>
-          <input type="number" id="rating-film" name="rating-film" min="1" max="10" required>
+          <label for="rating">
+            Rating
+          </label>
+
+          <input
+            type="number"
+            id="rating"
+            name="rating"
+            min="0"
+            max="10"
+            step="0.1"
+            required
+          >
         </p>
-        <button type="submit">Simpan</button>
+
+
+        <button type="submit">
+          Tambah Film
+        </button>
+
       </form>
+
     </section>
 
+
+    <!-- TENTANG SAYA -->
     <section id="tentang-saya">
-      <h3>Tentang Saya</h3>
-      <p> Nama: Indriani Putri Darussalam</p>
-      <p> NIM: 25523228</p>
-      <p> Program Studi: Teknik Informatika</p>
-      <p> Tahun: 2026</p>
+
+      <h2>Tentang Saya</h2>
+
+      <p>
+        <strong>Nama:</strong>
+        Indriani Putri Darussalam
+      </p>
+
+      <p>
+        <strong>NIM:</strong>
+        25523228
+      </p>
+
+      <p>
+        <strong>Program Studi:</strong>
+        Informatika
+      </p>
+
+      <p>
+        <strong>Tahun:</strong>
+        2026
+      </p>
+
     </section>
+
   </main>
 
+
+  <!-- FOOTER -->
   <footer>
-    <hr>
-    <p> Universitas islam Indonesia</p>
+
+    <p>
+      &copy; 2026 Indriani Putri Darussalam / universitas islam indonesia
+    </p>
+
   </footer>
 
+
+  <!-- JAVASCRIPT -->
   <script>
-    document.getElementById('form-tambah').addEventListener('submit', function(event) {
-      event.preventDefault(); // Mencegah eror berpindah halaman
 
-      const judul = document.getElementById('judul-film').value;
-      const tahun = document.getElementById('tahun-film').value;
-      const genre = document.getElementById('genre-film').value;
-      const rating = document.getElementById('rating-film').value;
+    const form = document.getElementById("film-form");
 
-      const tbody = document.getElementById('tabel-film');
-      const barisBaru = document.createElement('tr');
+    form.addEventListener("submit", function(event) {
 
-      barisBaru.innerHTML = `
-        <th scope="row">${judul}</th>
+      event.preventDefault();
+
+      const judul = document.getElementById("judul").value;
+      const tahun = document.getElementById("tahun").value;
+      const genre = document.getElementById("genre").value;
+      const rating = document.getElementById("rating").value;
+
+      const tbody = document.querySelector("tbody");
+
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <th scope="row">
+          ${judul}
+        </th>
+
         <td>${tahun}</td>
+
         <td>${genre}</td>
+
         <td>${rating}/10</td>
       `;
 
-      tbody.appendChild(barisBaru);
-      this.reset();
-      alert('Film berhasil ditambahkan!');
+      tbody.appendChild(row);
+
+      form.reset();
+
     });
+
   </script>
 
 </body>
+
 </html>

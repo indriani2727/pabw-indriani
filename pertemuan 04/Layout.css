@@ -1,21 +1,117 @@
-/* TATA LETAK */
+/* Layout utama */
 
-header {
-  margin-bottom: var(--space-6);
+header,
+main,
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-main {
-  margin-bottom: var(--space-6);
+header {
+  margin-bottom: var(--space-7);
 }
 
 section {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-7);
+}
+
+
+/* ==============================
+   NAVBAR LAYAR LEBAR
+   ============================== */
+
+.header-nav {
+  display: grid;
+
+  /* Judul kiri, menu kanan */
+  grid-template-columns: 1fr auto;
+
+  align-items: center;
+  gap: var(--space-4);
+
+  margin-bottom: var(--space-5);
+}
+
+.header-title {
+  margin: 0;
+}
+
+nav {
+  min-width: 0;
 }
 
 nav ul {
-  padding-left: var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  gap: var(--space-3);
 }
 
-footer {
-  margin-top: var(--space-6);
+nav li {
+  white-space: nowrap;
+}
+
+
+/* ==============================
+   LAYOUT FORM
+   ============================== */
+
+form {
+  max-width: 600px;
+}
+
+
+/* ==============================
+   LAYAR SEMPIT
+   ============================== */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: var(--space-4);
+  }
+
+
+  /* Navbar menjadi satu kolom */
+
+  .header-nav {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .header-title {
+    width: 100%;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: var(--space-2);
+  }
+
+  nav li {
+    width: 100%;
+    white-space: normal;
+  }
+
+  nav a {
+    display: block;
+    padding: var(--space-2) 0;
+  }
 }

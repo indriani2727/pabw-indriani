@@ -1,20 +1,41 @@
-/* DASAR — aturan dasar halaman */
+/* Dasar halaman */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: sans-serif;
   margin: 0;
-  padding: var(--space-6);
+  padding: var(--space-5);
   line-height: 1.6;
   background-color: var(--color-bg);
-  color: var(--color-fg);
+  color: var(--color-text);
 }
 
 h1,
 h2,
 h3 {
-  color: var(--color-heading);
+  color: var(--color-primary);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 img {
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-image-border);
 }
