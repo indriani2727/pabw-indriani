@@ -16,4 +16,4 @@ Topik halaman saya: Daftar Film yang Pernah Saya Tonton.
 
 ## Catatan penggunaan AI
 
-Saya menggunakan AI untuk membantu memahami instruksi tugas dan menyusun struktur README.md. Isi topik, data film, dan pengerjaan halaman profil saya sesuaikan dan kerjakan sendiri.
+Saya menggunakan AI untuk membantu memahami instruksi tugas dan menyusun struktur README.md. Isi topik, data film, dan pengerjaan halaman profil saya sesuaikan dan kerjakan sendiri. untuk eror di vs code saya menggunakan bantuan auto correct yang tersedia di VScode. dan untuk kode HTML saya menggunakan website W3School.
