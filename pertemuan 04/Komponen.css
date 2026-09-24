@@ -1,0 +1,51 @@
+/* KOMPONEN */
+
+/* Tabel */
+table,
+th,
+td {
+  border: 1px solid var(--color-border);
+  border-collapse: collapse;
+  padding: var(--space-3);
+}
+
+th {
+  background-color: var(--color-table-header);
+  color: var(--color-table-header-text);
+  text-align: left;
+}
+
+td,
+th[scope="row"] {
+  background-color: var(--color-surface);
+}
+
+
+/* Gambar film */
+img {
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-image-border);
+}
+
+
+/* Form */
+input {
+  padding: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+
+/* Tombol */
+button {
+  background-color: var(--color-primary);
+  color: var(--white);
+  border: none;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-primary-hover);
+}

@@ -1,0 +1,20 @@
+/* DASAR — aturan dasar halaman */
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: var(--space-6);
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-heading);
+}
+
+img {
+  object-fit: cover;
+}

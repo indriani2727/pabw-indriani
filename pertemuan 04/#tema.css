@@ -1,0 +1,20 @@
+/* LAPIS 2 — semantik: nama berdasarkan peran */
+
+:root {
+  --color-bg: var(--green-bg);
+  --color-fg: var(--gray-text);
+
+  --color-heading: var(--pink-700);
+
+  --color-primary: var(--pink-700);
+  --color-primary-hover: var(--pink-600);
+
+  --color-border: var(--green-border);
+
+  --color-table-header: var(--green-header);
+  --color-table-header-text: var(--green-text);
+
+  --color-surface: var(--white-soft);
+
+  --color-image-border: var(--pink-light);
+}

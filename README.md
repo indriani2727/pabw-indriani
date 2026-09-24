@@ -14,6 +14,12 @@ Topik halaman saya: Daftar Film yang Pernah Saya Tonton.
 - Kolom form: Judul Film, Tahun Rilis, Rating
 - Gambar: Belum ditentukan
 
-## Catatan penggunaan AI
+### Catatan penggunaan AI
 
-Saya menggunakan AI untuk membantu memahami instruksi tugas dan menyusun struktur README.md. Isi topik, data film, dan pengerjaan halaman profil saya sesuaikan dan kerjakan sendiri. untuk eror di vs code saya menggunakan bantuan auto correct yang tersedia di VScode. dan untuk kode HTML saya menggunakan website W3School.
+Saya menggunakan AI untuk membantu memahami instruksi tugas dan menyusun struktur README.md dan membantu menambah script karena saya coba sendiri yang berujung eror. Isi topik, data film, dan pengerjaan halaman profil saya sesuaikan dan kerjakan sendiri. untuk kode HTML saya menggunakan website W3School.
+
+## Pertemuan 4 - Design Token Halaman Profil
+
+-Berkas gaya yang akan dibuat: token.css, base.css, layout.css, komponen.css, tema.css.
+
+### Token yang saya tetapkan 
