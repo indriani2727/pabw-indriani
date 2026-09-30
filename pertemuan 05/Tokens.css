@@ -1,0 +1,43 @@
+:root {
+
+  /* Warna tema terang */
+  --color-primary: #C71585;
+  --color-text: #2B2D2F;
+  --color-bg: #E8EED9;
+  --color-border: #C4D3A6;
+  --color-header-bg: #D3E0B5;
+  --color-header-text: #3D4E1E;
+  --color-card-bg: #F8FAF2;
+  --color-hover: #A0126C;
+  --color-image-border: #FFB6C1;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+}
+
+
+/* ==============================
+   TEMA GELAP
+   ============================== */
+
+body.tema-gelap {
+  --color-primary: #FF69B4;
+  --color-text: #F1F1F1;
+  --color-bg: #1E1E1E;
+  --color-border: #444444;
+  --color-header-bg: #2D2D2D;
+  --color-header-text: #FFFFFF;
+  --color-card-bg: #292929;
+  --color-hover: #FF1493;
+  --color-image-border: #FF69B4;
+}

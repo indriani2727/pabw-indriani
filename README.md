@@ -20,7 +20,7 @@ Saya menggunakan AI untuk membantu memahami instruksi tugas dan menyusun struktu
 
 ## Pertemuan 4 - Design Token Halaman Profil
 
--Berkas gaya yang akan dibuat: token.css, base.css, layout.css, komponen.css, tema.css.
+Berkas gaya yang akan dibuat: token.css, base.css, layout.css, komponen.css, tema.css.
 
 ### Token yang saya tetapkan 
 
@@ -45,3 +45,20 @@ Saya menggunakan AI untuk membantu memahami instruksi tugas dan menyusun struktu
 ### Kriteria selesai
 
 Mengubah color primary pada satu baris di token.css akan mengubah warna utama yang digunakan pada judul, header, dan tombol.
+
+## Pertemuan 5 - belajar grid dan flexbox
+
+halaman profil dikembangkan dengan menggunakan **CSS Grid** dan **Flexbox** agar susunan halaman lebih rapi, fleksibel, dan dapat menyesuaikan ukuran layar.
+
+### tata letak yang saya gunakan
+
+- Daftar film beserta gambar dan informasi singkat.
+- Form untuk menambahkan film.
+- Sidebar dan navigasi halaman.
+- Tampilan responsif menggunakan CSS Grid dan Flexbox.
+- Fitur tema gelap.
+- Pengaturan layout agar tidak meluber pada berbagai ukuran layar.
+
+### Kriteria selesai
+
+Layout halaman sudah menggunakan Grid dan Flexbox, galeri bersifat responsif, serta masalah tinggi kartu, teks panjang, dan elemen yang meluber sudah diperbaiki. Tampilan juga dapat menyesuaikan ukuran layar dan memiliki fitur tema gelap.

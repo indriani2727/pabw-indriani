@@ -1,0 +1,27 @@
+/* ==============================
+   TEMA WARNA
+   ============================== */
+
+.pink-header-1,
+.pink-header-2 {
+  color: var(--color-primary);
+}
+
+
+/* ==============================
+   TOMBOL TEMA
+   ============================== */
+
+.tombol-tema {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tombol-tema:hover {
+  background-color: var(--color-hover);
+}
