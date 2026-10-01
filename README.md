@@ -62,3 +62,24 @@ halaman profil dikembangkan dengan menggunakan **CSS Grid** dan **Flexbox** agar
 ### Kriteria selesai
 
 Layout halaman sudah menggunakan Grid dan Flexbox, galeri bersifat responsif, serta masalah tinggi kartu, teks panjang, dan elemen yang meluber sudah diperbaiki. Tampilan juga dapat menyesuaikan ukuran layar dan memiliki fitur tema gelap.
+
+## Pertemuan 6 - Responsif Mobile-First
+
+Melanjutkan halaman dari Pertemuan 5 dengan menambahkan fitur responsif menggunakan Mobile-First.
+
+### responsif yang saya kerjakan
+
+| No. | Pengerjaan                                              |
+| --- | ------------------------------------------------------- |
+| 1   | Menambahkan `meta viewport` pada HTML                   |
+| 2   | Membuat file `responsif.css`                            |
+| 3   | Membuat layout dasar 1 kolom                            |
+| 4   | Menambahkan breakpoint `48rem` untuk galeri 2 kolom     |
+| 5   | Menambahkan breakpoint `60rem` untuk sidebar dan konten |
+| 6   | Mengatur gambar dengan `max-width: 100%`                |
+| 7   | Membuat tabel dapat di-scroll dengan `overflow-x: auto` |
+| 8   | Menguji tampilan pada 360 px, 768 px, dan 1280 px       |
+
+### Hasil
+
+Halaman dapat menyesuaikan tampilan dari **mobile hingga desktop** tanpa scroll horizontal.
