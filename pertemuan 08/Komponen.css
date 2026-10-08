@@ -1,0 +1,163 @@
+/* ==============================
+   GALERI
+   ============================== */
+
+.galeri {
+  display: grid;
+  align-content: start;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.kartu--lebar {
+  grid-column: span 1;
+}
+
+.kartu {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 14rem;
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.kartu__isi {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-4);
+}
+
+.kartu__isi img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: var(--space-3);
+}
+
+.kartu__isi h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  overflow-wrap: anywhere;
+  font-size: 1.25rem;
+}
+
+.kartu__isi p {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.kartu__kaki {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+
+/* ==============================
+   TABLE
+   ============================== */
+
+/* Tabel lebar dapat digulir sendiri */
+.table-container {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: var(--space-3);
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--color-border);
+}
+
+th,
+td {
+  padding: var(--space-3);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+thead th {
+  background-color: var(--color-header-bg);
+  color: var(--color-header-text);
+}
+
+td,
+th[scope="row"] {
+  background-color: var(--color-card-bg);
+}
+
+
+/* ==============================
+   FORM
+   ============================== */
+
+form p {
+  margin-bottom: var(--space-4);
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: var(--space-2);
+  margin-top: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-hover);
+}
+
+
+/* ==============================
+   C.1 TITIK HENTI
+   ============================== */
+
+/* Tablet: galeri menjadi dua kolom */
+@media (min-width: 48rem) {
+  .galeri {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kartu--lebar {
+    grid-column: span 2;
+  }
+}
