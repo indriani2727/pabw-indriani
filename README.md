@@ -20,7 +20,7 @@ Saya menggunakan AI untuk membantu memahami instruksi tugas dan menyusun struktu
 
 ## Pertemuan 4 - Design Token Halaman Profil
 
-Berkas gaya yang akan dibuat: token.css, base.css, layout.css, komponen.css, tema.css.
+-Berkas gaya yang akan dibuat: token.css, base.css, layout.css, komponen.css, tema.css.
 
 ### Token yang saya tetapkan 
 
@@ -46,40 +46,43 @@ Berkas gaya yang akan dibuat: token.css, base.css, layout.css, komponen.css, tem
 
 Mengubah color primary pada satu baris di token.css akan mengubah warna utama yang digunakan pada judul, header, dan tombol.
 
-## Pertemuan 5 - belajar grid dan flexbox
+## Pertemuan 5 - CSS Flexbox dan Grid.
 
-halaman profil dikembangkan dengan menggunakan **CSS Grid** dan **Flexbox** agar susunan halaman lebih rapi, fleksibel, dan dapat menyesuaikan ukuran layar.
+Grid: Mengatur kerangka halaman dan galeri kartu.
 
-### tata letak yang saya gunakan
+Flexbox: Menyusun navbar dan isi kartu.
 
-- Daftar film beserta gambar dan informasi singkat.
-- Form untuk menambahkan film.
-- Sidebar dan navigasi halaman.
-- Tampilan responsif menggunakan CSS Grid dan Flexbox.
-- Fitur tema gelap.
-- Pengaturan layout agar tidak meluber pada berbagai ukuran layar.
+Responsif: Menggunakan repeat(auto-fit, minmax(16rem, 1fr)) agar jumlah kolom galeri menyesuaikan ukuran layar.
 
-### Kriteria selesai
+Pengujian: Memeriksa tampilan pada lebar 360 px dan 1280 px agar tidak meluber.
 
-Layout halaman sudah menggunakan Grid dan Flexbox, galeri bersifat responsif, serta masalah tinggi kartu, teks panjang, dan elemen yang meluber sudah diperbaiki. Tampilan juga dapat menyesuaikan ukuran layar dan memiliki fitur tema gelap.
+### kriteria selesai
 
-## Pertemuan 6 - Responsif Mobile-First
+Layout halaman menggunakan Grid dan Flexbox dengan benar, galeri kartu menyesuaikan ukuran layar, tidak ada elemen yang meluber, dan tombol tema gelap tetap berfungsi.
 
-Melanjutkan halaman dari Pertemuan 5 dengan menambahkan fitur responsif menggunakan Mobile-First.
+## Pertemuan 6 — Responsif Mobile-First
 
-### responsif yang saya kerjakan
+Melanjutkan halaman profil dari P5 agar responsif di berbagai ukuran layar menggunakan viewport, CSS Grid, dan media query.
 
-| No. | Pengerjaan                                              |
-| --- | ------------------------------------------------------- |
-| 1   | Menambahkan `meta viewport` pada HTML                   |
-| 2   | Membuat file `responsif.css`                            |
-| 3   | Membuat layout dasar 1 kolom                            |
-| 4   | Menambahkan breakpoint `48rem` untuk galeri 2 kolom     |
-| 5   | Menambahkan breakpoint `60rem` untuk sidebar dan konten |
-| 6   | Mengatur gambar dengan `max-width: 100%`                |
-| 7   | Membuat tabel dapat di-scroll dengan `overflow-x: auto` |
-| 8   | Menguji tampilan pada 360 px, 768 px, dan 1280 px       |
+- **Berkas baru:** `responsif.css`
+- **Viewport:** Menambahkan meta viewport pada HTML.
+- **Layout:** Gaya dasar satu kolom untuk layar kecil.
+- **Media query:** Breakpoint `48rem` dan `60rem`.
+- **Responsivitas:** Gambar menyesuaikan wadah dan tabel dapat digulir.
 
-### Hasil
+### Kriteria Selesai
 
-Halaman dapat menyesuaikan tampilan dari **mobile hingga desktop** tanpa scroll horizontal.
+Halaman tampil responsif pada 360 px, 768 px, dan 1.280 px tanpa gulir mendatar. Galeri menyesuaikan kolom, sidebar tampil berdampingan pada layar lebar, dan tiga tangkapan layar pengujian tersimpan di GitHub.
+
+## Pertemuan 8 — JavaScript Modern ES6+
+
+Pertemuan 8 membahas penggunaan JavaScript untuk menyimpan dan mengolah data halaman profil menggunakan variabel, fungsi, objek, array, dan array methods.
+
+- **Variabel:** Menggunakan `const`, `let`, dan template literal.
+- **Fungsi:** Membuat dua fungsi murni untuk perkenalan dan pemformatan keahlian.
+- **Array methods:** Menggunakan `map()`, `filter()`, dan `find()` untuk mengolah data.
+- **Penanganan error:** Memeriksa Console dan memperbaiki kesalahan kode.
+
+### Kriteria Selesai
+
+JavaScript berjalan tanpa error, data profil dan proyek tersimpan di `app.js`, dua fungsi murni bekerja, array methods menghasilkan data yang benar.

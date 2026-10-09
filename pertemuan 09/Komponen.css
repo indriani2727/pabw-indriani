@@ -1,0 +1,106 @@
+#filter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+
+#filter button {
+  border: none;
+  background-color: var(--warna-pink);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+
+#filter button:hover {
+  opacity: 0.85;
+}
+
+
+#filter button.aktif {
+  outline: 3px solid rgba(212, 20, 120, 0.25);
+}
+
+
+#daftar {
+  list-style: none;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+
+.kartu {
+  background-color: white;
+  border: 1px solid var(--warna-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.gambar-proyek {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+
+.kartu h3,
+.kartu p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+.kartu h3 {
+  margin-top: 15px;
+  color: var(--warna-pink);
+}
+
+
+.kartu p {
+  color: #555;
+}
+
+
+
+#pesan-kosong {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+
+
+#film-form {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+
+#film-form p {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+#film-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+#film-form button {
+  background-color: var(--warna-pink);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
