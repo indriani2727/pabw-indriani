@@ -2,7 +2,7 @@
 <template>
   <header>
     <h1 class="pink-header-1">
-      # PABW — Indriani Putri Darussalam
+      # PABW — {{ profil.nama }}
     </h1>
 
     <h2 class="pink-header-2"># ini pertemuan 12</h2>
@@ -29,11 +29,17 @@
         </ul>
       </nav>
     </div>
+
+    <p class="peran-profil">{{ profil.peran }}</p>
   </header>
 </template>
 
 <script setup>
 defineProps({
+  profil: {
+    type: Object,
+    required: true
+  },
   temaGelap: {
     type: Boolean,
     required: true

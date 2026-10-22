@@ -2,6 +2,7 @@
 <template>
   <div class="page">
     <HeaderProfil
+      :profil="identitas"
       :tema-gelap="state.temaGelap"
       @ubah-tema="ubahTema"
     />
@@ -9,7 +10,8 @@
     <main class="isi">
       <aside class="sisi" id="tentang-saya">
         <h2>Tentang Saya</h2>
-        <p><strong>Nama:</strong><br />Indriani Putri Darussalam</p>
+        <p><strong>Nama:</strong><br />{{ identitas.nama }}</p>
+        <p><strong>Peran:</strong><br />{{ identitas.peran }}</p>
         <p><strong>NIM:</strong><br />25523228</p>
         <p><strong>Program Studi:</strong><br />Informatika</p>
         <p><strong>Tahun:</strong><br />2026</p>
@@ -61,7 +63,11 @@ import FormProyek from './components/FormProyek.vue'
 
 import { daftarProyek } from '../js/data.js'
 
-// Hubungkan nama gambar dengan file di folder utama proyek.
+const identitas = {
+  nama: 'Indriani Putri Darussalam',
+  peran: 'Mahasiswa Informatika'
+}
+
 const gambarProyek = {
   'Obsession.jpg': new URL('../Obsession.jpg', import.meta.url).href,
   'White_chicks.jpg': new URL('../White_chicks.jpg', import.meta.url).href,
