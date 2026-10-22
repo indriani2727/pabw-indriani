@@ -1,12 +1,17 @@
+
 import { createApp } from 'vue'
 import App from './App.vue'
 
-// CSS P04–P06 dipakai tanpa mengubah isi berkas dan urutannya.
-import './tokens.css'
-import './base.css'
-import './layout.css'
-import './komponen.css'
-import './tema.css'
-import './responsif.css'
+// CSS lama dari P04–P06
+import '../Tokens.css'
+import '../Base.css'
+import '../Layout.css'
+import '../Komponen.css'
+import '../responsif.css'
+import '../tema.css'
 
+// CSS tambahan untuk Vue P12
+import './style.css'
+
+// Jalankan aplikasi Vue
 createApp(App).mount('#app')
