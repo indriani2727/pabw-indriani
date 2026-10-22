@@ -1,0 +1,31 @@
+body {
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+
+body.tema-gelap {
+  background-color: #222;
+  color: #eee;
+}
+
+
+body.tema-gelap .sisi,
+body.tema-gelap .kartu,
+body.tema-gelap #film-form,
+body.tema-gelap #pesan-kosong {
+  background-color: #333;
+  color: #eee;
+}
+
+
+body.tema-gelap .kartu p {
+  color: #ddd;
+}
+
+
+body.tema-gelap .tombol-tema {
+  background-color: #444;
+  color: white;
+}

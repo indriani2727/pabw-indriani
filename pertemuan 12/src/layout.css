@@ -1,0 +1,76 @@
+.page {
+  min-height: 100vh;
+}
+
+
+header {
+  padding: 25px;
+}
+
+
+.pink-header-1 {
+  color: var(--warna-pink);
+  margin-bottom: 5px;
+}
+
+
+.pink-header-2 {
+  color: var(--warna-pink);
+  margin-top: 0;
+}
+
+
+.navbar {
+  margin-top: 25px;
+}
+
+
+.header-title {
+  color: var(--warna-pink);
+}
+
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+}
+
+
+nav a {
+  color: var(--warna-pink);
+  font-weight: bold;
+}
+
+
+.isi {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 30px;
+  padding: 30px;
+}
+
+
+.sisi {
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+
+.utama {
+  min-width: 0;
+}
+
+
+.bawah {
+  grid-column: 1 / -1;
+}
+
+
+footer {
+  padding: 30px;
+  text-align: center;
+}
