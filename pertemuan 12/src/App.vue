@@ -23,7 +23,7 @@
         <FilterProyek
           :kategori-aktif="state.kategoriAktif"
           @pilih-kategori="pilihKategori"
-          @atur-ulang="aturUlang"
+          @atur-ulang="aturUlangPilihan"
         />
 
         <ul id="daftar">
@@ -54,14 +54,15 @@
 </template>
 
 <script setup>
-import { reactive, computed, watch } from 'vue'
+import { computed, onMounted, watch } from 'vue'
 
 import HeaderProfil from './components/HeaderProfil.vue'
 import FilterProyek from './components/FilterProyek.vue'
 import KartuProyek from './components/KartuProyek.vue'
 import FormProyek from './components/FormProyek.vue'
 
-import { daftarProyek } from '../js/data.js'
+import { state, pilihKategori } from './state.js'
+import { muat, simpan, aturUlang } from './simpanan.js'
 
 const identitas = {
   nama: 'Indriani Putri Darussalam',
@@ -75,41 +76,11 @@ const gambarProyek = {
   'The_house_bunny.jpg': new URL('../The_house_bunny.jpg', import.meta.url).href
 }
 
-const KUNCI = 'pabw-p11'
-const VERSI = 2
-
-function muatKategori() {
-  try {
-    const teks = localStorage.getItem(KUNCI)
-
-    if (teks === null) return 'semua'
-
-    const isi = JSON.parse(teks)
-    const kategoriValid = ['semua', 'web', 'data']
-
-    if (
-      isi?.versi !== VERSI ||
-      !kategoriValid.includes(isi?.kategoriAktif)
-    ) {
-      localStorage.removeItem(KUNCI)
-      return 'semua'
-    }
-
-    return isi.kategoriAktif
-  } catch {
-    return 'semua'
-  }
-}
-
-const state = reactive({
-  daftarProyek: daftarProyek.map((proyek, indeks) => ({
-    ...proyek,
-    id: indeks + 1,
-    gambar: gambarProyek[proyek.gambar] || ''
-  })),
-  kategoriAktif: muatKategori(),
-  temaGelap: false
-})
+state.daftarProyek = state.daftarProyek.map((proyek, indeks) => ({
+  ...proyek,
+  id: indeks + 1,
+  gambar: gambarProyek[proyek.gambar] || proyek.gambar || ''
+}))
 
 const proyekTampil = computed(() => {
   if (state.kategoriAktif === 'semua') {
@@ -121,21 +92,18 @@ const proyekTampil = computed(() => {
   )
 })
 
-watch(
-  () => state.kategoriAktif,
-  (kategoriAktif) => {
-    try {
-      localStorage.setItem(
-        KUNCI,
-        JSON.stringify({
-          versi: VERSI,
-          kategoriAktif
-        })
-      )
-    } catch {
-      // Aplikasi tetap berjalan jika penyimpanan tidak tersedia.
-    }
+onMounted(() => {
+  const isi = muat()
+
+  if (isi) {
+    pilihKategori(isi.kategoriAktif)
   }
+})
+
+watch(
+  state,
+  (nilai) => simpan(nilai),
+  { deep: true }
 )
 
 watch(
@@ -146,25 +114,15 @@ watch(
   { immediate: true }
 )
 
-function pilihKategori(kategori) {
-  if (!['semua', 'web', 'data'].includes(kategori)) return
-
-  state.kategoriAktif = kategori
-}
-
 function ubahTema() {
   state.temaGelap = !state.temaGelap
 }
 
-function aturUlang() {
+function aturUlangPilihan() {
+  aturUlang()
   state.kategoriAktif = 'semua'
   state.temaGelap = false
-
-  try {
-    localStorage.removeItem(KUNCI)
-  } catch {
-    // Aplikasi tetap berjalan jika penyimpanan tidak tersedia.
-  }
+  simpan(state)
 }
 
 function tambahProyek(proyekBaru) {
@@ -173,6 +131,6 @@ function tambahProyek(proyekBaru) {
     id: Date.now()
   })
 
-  state.kategoriAktif = 'semua'
+  pilihKategori('semua')
 }
 </script>
