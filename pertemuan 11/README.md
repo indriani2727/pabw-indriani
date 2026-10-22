@@ -87,6 +87,35 @@ Pertemuan 8 membahas penggunaan JavaScript untuk menyimpan dan mengolah data hal
 
 JavaScript berjalan tanpa error, data profil dan proyek tersimpan di `app.js`, dua fungsi murni bekerja, array methods menghasilkan data yang benar.
 
+## Pertemuan 9 — Manipulasi DOM dan Event
+
+Daftar proyek dibuat secara dinamis menggunakan DOM. Tombol filter Semua/Web/Data menampilkan proyek sesuai kategori, pesan kosong ditampilkan jika tidak ada hasil, dan halaman berjalan tanpa error JavaScript.
+
+- Pembuatan kartu: Fungsi buatKartu(proyek) membuat elemen kartu berisi gambar, judul, tahun, dan kategori proyek.
+- Render daftar: Fungsi render(daftar) membersihkan daftar sebelumnya, menampilkan pesan jika tidak ada data, lalu menambahkan kartu yang sesuai.
+- Filter kategori: Tombol Semua, Web, dan Data digunakan untuk menyaring proyek. Event delegation digunakan untuk menangani klik tombol filter.
+- Pengujian: Memastikan kartu proyek tampil, gambar dan judul sesuai, filter bekerja, serta tidak ada error JavaScript di Console.
+
+### Catatan penggunaan AI — P9
+
+AI membantu memahami manipulasi DOM, pembuatan kartu, dan penanganan event filter serta membantu memeriksa error. Saya menguji hasilnya melalui browser dan menyesuaikan data serta tampilan proyek saya.
+
+## Pertemuan 10 — Mengambil Data dari API
+
+js/api.js memanggil endpoint HTTPS, memeriksa status respons sebelum membaca JSON, menangani kegagalan melalui catch(), dan hasil permintaan dapat diperiksa di Console serta panel Network.
+- Berkas baru: js/api.js.
+- Alamat API: Menggunakan API publik JSONPlaceholder melalui https://jsonplaceholder.typicode.com/posts.
+- Konfigurasi alamat: Alamat API disimpan satu kali pada konstanta ALAMAT di bagian atas js/api.js.
+- Permintaan data: Fungsi muat() menggunakan fetch() untuk mengambil data dari API.
+- Pemeriksaan respons: Memeriksa respons.status dan respons.ok serta melempar error jika respons tidak berhasil sebelum membaca JSON.
+- Membaca data: Respons dibaca menggunakan respons.json(). Hasil dan jumlah data ditampilkan di Console.
+- Pengujian Network: Memeriksa permintaan posts pada panel Network, termasuk Headers, Response, status respons, dan Content-Type.
+- Keamanan: Tidak menambahkan API key atau token ke dalam kode.
+
+### Catatan penggunaan AI — P10
+
+AI membantu menyusun contoh pemanggilan API menggunakan fetch(), pemeriksaan respons, dan penanganan error. Saya tetap perlu menjalankan halaman melalui Live Server dan memastikan hasil aktual di Console serta Network sebelum mengumpulkan bukti pengujian.
+
 ## Pertemuan 11 — Modul, State, dan Penyimpanan Klien
 
 - **`js/data.js`** menyimpan data proyek dan fungsi murni `buatPerkenalan()` serta `formatKeahlian()`.
@@ -98,21 +127,6 @@ JavaScript berjalan tanpa error, data profil dan proyek tersimpan di `app.js`, d
 - **Yang sengaja tidak disimpan:** kata sandi, token, data pribadi, gambar, dan data proyek lengkap. `localStorage` tidak terenkripsi dan hanya cocok untuk preferensi tampilan kecil.
 - **Penanganan simpanan rusak:** bila JSON tidak valid atau nomor versi tidak sesuai, simpanan dihapus dan halaman memakai nilai bawaan.
 
-### Cara menguji P11
-
-1. Buka folder ini di VS Code dan jalankan `profil.html` menggunakan Live Server.
-2. Pastikan empat kartu muncul dan filter Semua/Web/Data bekerja.
-3. Pilih Web atau Data, tutup tab, lalu buka lagi alamat Live Server yang sama. Kategori terakhir harus tetap terpilih.
-4. Klik **Atur Ulang**. Kategori kembali ke Semua dan simpanan dihapus.
-5. Di Console, jalankan `localStorage.setItem("pabw-p11", "bukan-json")`, lalu muat ulang. Halaman harus tetap terbuka dan kembali ke nilai bawaan.
-6. Uji versi lama dengan `localStorage.setItem("pabw-p11", "{}")`, lalu muat ulang. Halaman tetap terbuka dan simpanan tidak valid dibuang.
-7. Jalankan `node -v` dan `npm -v` di terminal. Catat hasil yang benar-benar muncul di bagian P11 ini sebelum mengumpulkan.
-
 ### Catatan penggunaan AI — P11
 
 AI membantu menyusun pemisahan modul JavaScript, state, fungsi penyimpanan dan pemulihan, serta penyesuaian `profil.html`. Data proyek, topik halaman, gambar, dan pilihan konten berasal dari proyek saya. Saya tetap perlu menjalankan pengujian di komputer sendiri, mencatat versi Node.js/npm yang terpasang, menyimpan bukti tangkapan layar, dan melakukan commit/push ke repositori saya.
-
-### Versi perangkat
-
-- `node -v`: **isi sesuai hasil terminal Anda**
-- `npm -v`: **isi sesuai hasil terminal Anda**
